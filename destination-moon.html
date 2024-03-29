@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body id="destination-moon">
+    <header>
+      <div class="logo">
+        <img src="./assets/Group 2.svg" alt="" />
+      </div>
+
+      <div class="right">
+        <div class="line"></div>
+        <nav>
+          <div class="navbar">
+            <p>00 <a href="./index.html">Home</a></p>
+            <p class="active">01 <a href="./destination-moon.html">Destination</a></p>
+            <p>02 <a href="./crew-commander.html">Crew</a></p>
+            <p>03 <a href="./technology-vehicle.html">Technology</a></p>
+          </div>
+
+          <div class="navbar-tablet">
+            <a href="./index.html">Home</a>
+            <a href="./destination-moon.html" class="active">Destination</a>
+            <a href="./crew-commander.html">Crew</a>
+            <a href="./technology-vehicle.html">Technology</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hambuger">
+        <img
+          id="menu-icon"
+          src="./assets/hambuger.svg"
+          alt="hambuger"
+          onclick="toggleMenu()"
+        />
+      </div>
+    </header>
+
+    <div class="menu">
+      <div class="menu-lists">
+        <p>00 <a href="./index.html">Home</a></p>
+        <p class="active">01 <a href="./destination-moon.html">Destination</a></p>
+        <p>02 <a href="./crew-commander.html">Crew</a></p>
+        <p>03 <a href="./technology-vehicle.html">Technology</a></p>
+      </div>
+    </div>
+
+    <div class="pick">
+      <p><span>01</span> Pick your destination</p>
+    </div>
+
+    <img src="./assets/Moon.png" class="planet desktop" />
+    <img src="./assets/moon-tablet.png" class="planet tablet" />
+    <img src="./assets/moon-mobile.png" class="planet mobile" />
+
+    <article>
+      <div class="navbar">
+        <a href="./destination-moon.html" class="active">Moon</a>
+        <a href="./destination-mars.html">Mars</a>
+        <a href="./destination-europa.html">Europa</a>
+        <a href="./destination-titan.html">Titan</a>
+      </div>
+
+      <h1>Moon</h1>
+
+      <p>
+        See our planet as you’ve never seen it before. A perfect relaxing trip
+        away to help regain perspective and come back refreshed. While you’re
+        there, take in some history by visiting the Luna 2 and Apollo 11 landing
+        sites.
+      </p>
+
+      <div class="line"></div>
+
+      <div class="rows">
+        <div class="row">
+          <p>Avg. distance</p>
+          <h3>384,400 km</h3>
+        </div>
+
+        <div class="row">
+          <p>Est. travel time</p>
+          <h3>3 days</h3>
+        </div>
+      </div>
+    </article>
+
+    <script>
+      function toggleMenu() {
+        var menuIcon = 
+        document.getElementById("menu-icon");
+        var menu = 
+        document.getElementsByClassName("menu")[0];
+
+          if (menu.style.display === "none") {
+            menu.style.display = "block";
+            menuIcon.src ="./assets/Close.svg";
+          } else {
+            menu.style.display = "none";
+            menuIcon.src = "./assets/hambuger.svg"
+          }
+      }
+    </script>
+  </body>
+</html>

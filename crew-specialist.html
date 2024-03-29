@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body id="crew-specialist">
+    <header>
+      <div class="logo">
+        <img src="./assets/Group 2.svg" alt="" />
+      </div>
+
+      <div class="right">
+        <div class="line"></div>
+        <nav>
+          <div class="navbar">
+            <p>00 <a href="./index.html">Home</a></p>
+            <p>01 <a href="./destination-moon.html">Destination</a></p>
+            <p class="active">02 <a href="./crew-commander.html">Crew</a></p>
+            <p>03 <a href="./technology-vehicle.html">Technology</a></p>
+          </div>
+          
+          <div class="navbar-tablet">
+            <a href="./index.html">Home</a>
+            <a href="./destination-moon.html">Destination</a>
+            <a href="./crew-commander.html" class="active">Crew</a>
+            <a href="./technology-vehicle.html">Technology</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hambuger">
+        <img
+          id="menu-icon"
+          src="./assets/hambuger.svg"
+          alt="hambuger"
+          onclick="toggleMenu()"
+        />
+      </div>
+    </header>
+
+    
+    <div class="menu">
+      <div class="menu-lists">
+        <p>00 <a href="./index.html">Home</a></p>
+        <p>01 <a href="./destination-moon.html">Destination</a></p>
+        <p class="active">02 <a href="./crew-commander.html">Crew</a></p>
+        <p>03 <a href="./technology-vehicle.html">Technology</a></p>
+      </div>
+    </div>
+
+    <div class="pick">
+      <p><span>02</span> Meet your crew</p>
+    </div>
+
+    <img src="./assets/Mark.png" class="crew desktop" />
+    <img src="./assets/mark-tablet.png" class="crew tablet" />
+    <img src="./assets/mark-mobile.png" class="crew mobile" />
+
+    <div class="line"></div>
+
+    <article>
+      <h3>Mission Specialist</h3>
+      <h1>Mark Shuttleworth</h1>
+      <p>
+        Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+        company behind the Linux-based Ubuntu operating system. Shuttleworth
+        became the first South African to travel to space as a space tourist.
+      </p>
+    </article>
+
+    <div class="navigation-button">
+      <a href="./crew-commander.html" class="circle"></a>
+      <a href="./crew-specialist.html" class="circle active"></a>
+      <a href="./crew-pilot.html" class="circle"></a>
+      <a href="./crew-engineer.html" class="circle"></a>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var menuIcon = document.getElementById("menu-icon");
+        var menu = document.getElementsByClassName("menu")[0];
+
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+          menuIcon.src = "./assets/Close.svg";
+        } else {
+          menu.style.display = "none";
+          menuIcon.src = "./assets/hambuger.svg";
+        }
+      }
+    </script>
+  </body>
+</html>
