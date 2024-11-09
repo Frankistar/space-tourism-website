@@ -1541,6 +1541,7 @@ DESIGN
         right: 0;
         /* background: url(./assets/Menu.png); */
         background-color: transparent;
+        -webkit-backdrop-filter: 30px;
         backdrop-filter: blur(30px);
         /* background-repeat: no-repeat;
         background-size: cover; */
